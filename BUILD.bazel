@@ -1,0 +1,10 @@
+load("@bazel_gazelle//:def.bzl", "gazelle")
+
+# gazelle:prefix github.com/robfig/repo1
+
+gazelle(
+    name = "gazelle",
+    extra_args = [
+        "-go_proto_compiler=@io_bazel_rules_go//proto:gogo_proto",
+    ],
+)

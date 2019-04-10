@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package repo1
+
+import "github.com/robfig/repo2/msg.proto"
+
+message Message {
+  string name = 1;
+  repo2.Message wrapped_message = 2;
+}
